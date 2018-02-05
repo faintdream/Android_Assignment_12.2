@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class Show extends AppCompatActivity {
@@ -23,5 +24,10 @@ public class Show extends AppCompatActivity {
         age.setText(getIntent().getExtras().getString("age"));
         city.setText(getIntent().getExtras().getString("city"));
         phone.setText(getIntent().getExtras().getString("phone"));
+
+        Toast.makeText(this, "Name: "+name.getText().toString()+
+                ", Age: "+age.getText().toString()+
+                " City: "+city.getText().toString()+
+                " Phone: "+phone.getText().toString(), Toast.LENGTH_SHORT).show();
     }
 }
